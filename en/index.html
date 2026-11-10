@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="3D fabrication, a folding sheet and assembly from fragments. Pick a scene or scrub through its cycle.">
+  <title>Three ways to make a plane · Telegram Materialization</title>
+  <link rel="stylesheet" href="../assets/css/telegram-invite.css">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <script type="module" src="../assets/demo.js"></script>
+</head>
+<body>
+  <header><span>ANDROMAN // MATERIALIZATION LAB</span><nav aria-label="Language"><a data-language="ru" href="../ru/">RU</a><a data-language="en" href="../en/">EN</a><a href="https://github.com/andromanpro/telegram-materialization">GitHub</a></nav></header>
+  <main>
+    <h1>Three ways to make a plane</h1>
+    <p class="description">3D fabrication, a folding sheet and assembly from fragments. Pick a scene or scrub through its cycle.</p>
+    <nav class="scene-picker" aria-label="Choose a scene">
+      <button data-scene="fabricator" aria-pressed="false">3D fabrication</button>
+      <button data-scene="printer" aria-pressed="false">Thermal printer</button>
+      <button data-scene="fragments" aria-pressed="false">Fragments</button>
+    </nav>
+    <p id="phase" class="phase" role="status">Preparing the scene</p>
+    <h2 id="scene-title" class="eyebrow">3D fabrication</h2>
+    <aside class="tg-invite" data-state="preparing" aria-label="Telegram">
+      <div class="tg-invite-stage">
+        <img class="tg-invite-poster" src="../assets/posters/fabricator-en.webp" alt="" width="600" height="440">
+        <canvas class="tg-invite-canvas" aria-hidden="true"></canvas>
+      </div>
+      <a class="tg-invite-link" href="https://t.me/andromanpro1c" target="_blank" rel="noopener noreferrer">Continue on Telegram ↗</a>
+    </aside>
+    <div class="transport">
+      <button id="play">Pause</button>
+      <input id="timeline" type="range" min="0" max="30" value="0" step="0.02" aria-label="Position in the cycle">
+      <output id="clock" for="timeline">0.0 s</output>
+    </div>
+    <noscript><p>3D fabrication, a folding sheet and assembly from fragments. Pick a scene or scrub through its cycle.</p></noscript>
+  </main>
+  <footer>Three.js r170 · self-hosted assets · source code under MIT</footer>
+</body>
+</html>

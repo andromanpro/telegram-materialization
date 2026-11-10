@@ -1,0 +1,216 @@
+@import url('fonts/fonts.css');
+html, body {
+  overflow-x: clip;
+}
+@media (min-width: 761px) and (max-height: 800px) {
+  body:not(.recording) .tg-invite .tg-invite-stage {
+    height: 300px;
+  }
+}
+:root{
+  color-scheme:dark;
+  --cyan:#38d6f4;
+  --mint:#85eadc;
+  --text:#d1e3ec;
+  --muted:#88a4b6;
+  background:#06101d;
+  color:var(--text);
+  font-family:Manrope,Arial,sans-serif
+}
+*{
+  box-sizing:border-box
+}
+body{
+  margin:0;
+  min-height:100svh;
+  background:radial-gradient(ellipse at 50% 58%,#10283a 0,#06101d 65%)
+}
+a{
+  color:var(--cyan);
+  text-underline-offset:4px
+}
+button,input{
+  font:inherit
+}
+button,a{
+  touch-action:manipulation
+}
+button{
+  cursor:pointer;
+  color:var(--text);
+  background:#0a1c2b;
+  border:1px solid #254455;
+  border-radius:6px;
+  padding:10px 16px
+}
+button:hover,button[aria-pressed=true]{
+  color:var(--mint);
+  border-color:var(--mint)
+}
+button:focus-visible,a:focus-visible,input:focus-visible{
+  outline:2px solid var(--mint);
+  outline-offset:4px
+}
+button:disabled{
+  opacity:.5;
+  cursor:wait
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:24px 36px;
+  gap:16px;
+  max-width:1440px;
+  margin:auto;
+  font:12px 'JetBrains Mono',monospace;
+  letter-spacing:.08em
+}
+header nav{
+  display:flex;
+  gap:22px
+}
+.eyebrow{
+  color:var(--mint);
+  font:12px 'JetBrains Mono',monospace;
+  letter-spacing:.12em
+}
+main{
+  max-width:1060px;
+  margin:auto;
+  text-align:center;
+  padding:6px 24px 30px
+}
+h1{
+  font-size:clamp(24px,3.3vw,40px);
+  font-weight:700;
+  margin:14px 0 8px
+}
+.description{
+  color:var(--muted);
+  margin:0 auto;
+  max-width:720px;
+  line-height:1.6;
+  font-size:14px
+}
+.scene-picker{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0 4px
+}
+.phase{
+  height:20px;
+  color:var(--mint);
+  font:12px 'JetBrains Mono',monospace;
+  margin:12px 0 0
+}
+.tg-invite{
+  margin:0 auto 0
+}
+.tg-invite .tg-invite-stage{
+  height:clamp(300px,53svh,430px);
+  width:min(100%,580px)
+}
+.tg-invite .tg-invite-poster{
+  transition:opacity .15s
+}
+.tg-invite[data-state=preparing] canvas.tg-invite-base{
+  visibility:hidden
+}
+.tg-invite[data-state=ready] .tg-invite-poster{
+  visibility:hidden
+}
+.transport{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  justify-content:center;
+  max-width:580px;
+  margin:16px auto 0
+}
+.transport input{
+  width:100%;
+  accent-color:var(--mint)
+}
+.transport output{
+  font:11px 'JetBrains Mono',monospace;
+  min-width:72px;
+  color:var(--muted)
+}
+footer{
+  text-align:center;
+  padding:12px 24px 28px;
+  font-size:12px;
+  color:var(--muted)
+}
+.language-picker main{
+  padding-top:20svh
+}
+.language-picker nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:24px
+}
+.primary{
+  padding:14px 24px;
+  border:1px solid #254455;
+  border-radius:6px
+}
+.recording header{
+  padding:24px 36px
+}
+.recording .scene-picker,.recording .transport,.recording footer,.recording .description{
+  display:none
+}
+.recording main{
+  padding-top:0
+}
+.recording .phase{
+  margin-top:18px
+}
+.recording .tg-invite-stage{
+  height:440px;
+  width:600px
+}
+.recording h1{
+  font-size:32px
+}
+.recording .tg-invite{
+  margin-top:12px
+}
+@media(max-width:600px){
+  header{
+    padding:20px;
+    font-size:10px;
+    letter-spacing:0
+  }
+  header nav{
+    gap:12px
+  }
+  main{
+    padding:0 20px 22px
+  }
+  .scene-picker button{
+    font-size:12px;
+    padding:10px
+  }
+  .tg-invite .tg-invite-stage{
+    height:340px
+  }
+  .transport{
+    gap:8px
+  }
+  .transport button{
+    font-size:12px;
+    padding:10px
+  }
+  .description{
+    font-size:13px
+  }
+  footer{
+    font-size:11px
+  }
+}

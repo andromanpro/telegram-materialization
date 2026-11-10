@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="3D-печать, бумажный лист и сборка из фрагментов. Выберите сцену или перемотайте цикл.">
+  <title>Три способа собрать самолётик · Telegram Materialization</title>
+  <link rel="stylesheet" href="../assets/css/telegram-invite.css">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <script type="module" src="../assets/demo.js"></script>
+</head>
+<body>
+  <header><span>ANDROMAN // ЛАБОРАТОРИЯ СБОРКИ</span><nav aria-label="Language"><a data-language="ru" href="../ru/">RU</a><a data-language="en" href="../en/">EN</a><a href="https://github.com/andromanpro/telegram-materialization">GitHub</a></nav></header>
+  <main>
+    <h1>Три способа собрать самолётик</h1>
+    <p class="description">3D-печать, бумажный лист и сборка из фрагментов. Выберите сцену или перемотайте цикл.</p>
+    <nav class="scene-picker" aria-label="Выбор сцены">
+      <button data-scene="fabricator" aria-pressed="false">3D-печать</button>
+      <button data-scene="printer" aria-pressed="false">Термопринтер</button>
+      <button data-scene="fragments" aria-pressed="false">Фрагменты</button>
+    </nav>
+    <p id="phase" class="phase" role="status">Подготовка сцены</p>
+    <h2 id="scene-title" class="eyebrow">3D-печать</h2>
+    <aside class="tg-invite" data-state="preparing" aria-label="Telegram">
+      <div class="tg-invite-stage">
+        <img class="tg-invite-poster" src="../assets/posters/fabricator-ru.webp" alt="" width="600" height="440">
+        <canvas class="tg-invite-canvas" aria-hidden="true"></canvas>
+      </div>
+      <a class="tg-invite-link" href="https://t.me/andromanpro1c" target="_blank" rel="noopener noreferrer">Продолжение в Telegram ↗</a>
+    </aside>
+    <div class="transport">
+      <button id="play">Пауза</button>
+      <input id="timeline" type="range" min="0" max="30" value="0" step="0.02" aria-label="Положение в цикле">
+      <output id="clock" for="timeline">0.0 s</output>
+    </div>
+    <noscript><p>3D-печать, бумажный лист и сборка из фрагментов. Выберите сцену или перемотайте цикл.</p></noscript>
+  </main>
+  <footer>Three.js r170 · локальные ресурсы · исходный код под MIT</footer>
+</body>
+</html>
